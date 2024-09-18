@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--Default settings-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--DynamicTitle-->
+    <title>{{ title }}</title>
+
+    <!--Links CSS-->
+    <link rel="stylesheet" href="{% static 'css/global.css' %}">
+
+    <!--For Personal CSS-->
+    {% block linkcss %}
+        <!-- ## css links ##-->
+    {% endblock linkcss %}
+
+</head>
+<body>
+    <header>
+        <h1>BrainCache.in</h1>
+    </header>
+
+    <div id='django-container'>
+        {% block code %}
+            <!--Code implementation-->
+        {% endblock code %}
+    </div>
+
+    <footer>
+        <p>© Copyright 2024</p>
+    </footer>
+</body>
+</html>
